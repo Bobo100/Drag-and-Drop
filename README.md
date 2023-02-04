@@ -1,4 +1,6 @@
 # Drag-and-Drop-To-Separate-two-blocks
+
+Simple code
 兩個區塊 中間 一條線
 使用JavaScript可以去放大縮小 兩個區塊
 
