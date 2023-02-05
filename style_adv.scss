@@ -1,0 +1,56 @@
+.mainsize {
+    position: relative;
+    vertical-align: baseline;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.screen {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.desktop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+//-------------------- left 左邊圖片區域 --------------------
+.left {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+    box-sizing: border-box;
+}
+
+.left > img {
+    height: 100%;
+    max-width: none !important;
+}
+//-------------------- seperate 中間分隔線 --------------------
+.seperate {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    margin-top: 11px;
+    cursor: url("./image/bar_arr.png"), move !important;
+    -webkit-user-select: none;
+    user-select: none;
+    left: 0;
+}

@@ -4,6 +4,10 @@ let currentX;
 let separatorLeft;
 let AWidth;
 
+// 設定左右邊界，避免分隔線超出頁面
+let leftBoundary = 0;
+let rightBoundary = window.innerWidth;
+
 // 滑鼠按下時，設定 isDragging 為 true，並記錄滑鼠位置、分隔線位置、A 寬度
 
 // offsetLeft是指元素左上角到父元素左上角的距離，包含border和padding，不包含margin，但是如果父元素有設定position，則不包含父元素的border和padding，只包含父元素的margin。
@@ -24,9 +28,13 @@ document.addEventListener("mouseup", () => {
 document.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   const distance = e.clientX - currentX;
-  const newAWidth = AWidth + distance;
-  document.querySelector(".A").style.width = `${newAWidth}px`;
+  const newSeparatorLeft = AWidth + distance;
+  if (newSeparatorLeft < leftBoundary || newSeparatorLeft > rightBoundary)
+    return;
+  document.querySelector(".A").style.width = `${newSeparatorLeft}px`;
   // B 寬度始終是整個頁面寬度減去 A 寬度
-  document.querySelector(".B").style.width = `calc(100% - ${newAWidth}px)`;
+  document.querySelector(
+    ".B"
+  ).style.width = `calc(100% - ${newSeparatorLeft}px)`;
   separator.style.left = `${separatorLeft + distance}px`;
 });
