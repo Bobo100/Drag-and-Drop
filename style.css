@@ -6,6 +6,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   text-align: center;
+  margin-top: 25vh;
 }
 
 .screen {
@@ -13,7 +14,6 @@
   display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
 }
 
@@ -52,7 +52,6 @@ img {
   cursor: url("./image/bar_arr.png"), move !important;
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   left: 0;
 }/*# sourceMappingURL=style.css.map */
